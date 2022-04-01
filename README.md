@@ -466,3 +466,184 @@ footer {
 
 3. Maka hasilnya seperti berikut.
 ![article](img/ss_article.png)
+
+## Pertanyaan dan Tugas
+1. Tambahkan Layout untuk menu About
+> Buat single layout yang berisi deskripsi, portfolio, dll
+2. Tambahkan layout untuk menu Contact
+> Berisi form isian: nama, email, message, dll
+
+## Jawab
+### 1. Halaman About
+#### `HTML`
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Reza Riyaldi Irawan</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_about.css">
+
+    <!-- Library -->
+    <script src="https://kit.fontawesome.com/d00fc238f0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>About Me</h1>
+        </header>
+        <nav>
+            <a href="home.html">Home</a>
+            <!-- <a href="artikel.html">Artikel</a> -->
+            <a href="about.html"class="active">About</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+
+        <section class="container-about">
+            <div class="bio">
+                <h1>Profile</h1>
+                <img src="../img/me-square.png" alt="">
+                <h4>Reza Riyaldi Irawan</h4>
+                <p>Programmer | Designer</p>
+                <p class="about">Saya adalah pemuda penuh semangat, terutama dalam hal mencari ilmu baru, dan sangat senang bereksperimen.</p>
+            </div>
+            <div class="skill">
+                <h1>Skill</h1>
+                <div class="bungkus">
+                    <div class="card designer">
+                        <div class="icon icon_desain">
+                            <i class="fa-solid fa-paintbrush"></i>
+                        </div>
+                        <h4>Desain Grafis</h4>
+                    </div>
+                    <div class="card web_dev">
+                        <div class="icon icon_web">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h4>Web Dev</h4>
+                    </div>
+                    <div class="card android">
+                        <div class="icon icon_android">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <h4>Android Dev</h4>
+                    </div>
+                    <div class="card video">
+                        <div class="icon icon_video">
+                            <i class="fa-solid fa-file-video"></i>
+                        </div>
+                        <h4>Editing Video</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2021 - Universitas Pelita Bangsa</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
+```
+
+#### CSS
+```css
+.container-about{
+    /* display: flex; */
+}
+
+.bio {
+    /* width: 30%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.bio img {
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 6px solid grey;
+    width: 130px;
+}
+
+.bio h4 {
+    margin-bottom: 5px;
+}
+
+.bio p.about {
+    margin-top: 20px;
+}
+
+
+/* Skill */
+.skill {
+    /* width: 70%; */
+    background-color: aliceblue;
+    padding: 30px 20px 50px;
+}
+
+.skill h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bungkus {
+    display: flex;
+}
+
+.card {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    /* float: left; */
+}
+
+.fa-solid, .fa-brands {
+    color: white;
+}
+
+.icon_desain {
+    background-color: rgb(69, 130, 209);
+}
+
+.icon_web {
+    background-color: rgb(219, 118, 35);
+}
+
+.icon_android {
+    background-color: rgb(35, 219, 50);
+}
+
+.icon_video {
+    background-color: rgb(176, 35, 219);
+}
+```
+
+#### Hasil
+![About](img/about-me.png)
