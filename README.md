@@ -647,3 +647,150 @@ footer {
 
 #### Hasil
 ![About](img/about-me.png)
+
+### 2. Halaman Kontak
+#### HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Sederhana</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Library -->
+    <script src="https://kit.fontawesome.com/d00fc238f0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>Contact Me</h1>
+        </header>
+        <nav>
+            <a href="home.html">Home</a>
+            <!-- <a href="artikel.html">Artikel</a> -->
+            <a href="about.html">About</a>
+            <a href="kontak.html" class="active">Kontak</a>
+        </nav>
+        <div class="container-kontak">
+            <section class="medsos">
+                <div class="social">
+                    <a href="#" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="ig"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="yt"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h1>Contact Me..</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam dolore harum nobis, quod
+                    adipisci, ea dolores nihil velit dolorem repellat alias eveniet dolor consequuntur tenetur, quo
+                    recusandae illum consectetur voluptatibus.</p>
+            </section>
+            <section class="form">
+                <form action="#">
+                    <input type="text" class="form-control" placeholder="Nama">
+
+                    <input type="email" class="form-control" placeholder="Email">
+
+                    <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Pesan"></textarea>
+
+                    <button>Submit</button>
+                </form>
+            </section>
+        </div>
+        <footer>
+            <p>&copy; 2021 - Universitas Pelita Bangsa</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
+```
+
+#### CSS
+```css
+/* ======================= Kontak ======================= */
+
+.container-kontak {
+    padding: 50px;
+    display: flex;
+}
+
+.medsos {
+    width: 50%;
+    border-right: 1px solid rgb(224, 224, 224);
+    padding: 10px;
+}
+
+.medsos .social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.medsos .social a {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.medsos .social a.fb {
+    background-color: rgb(32, 91, 219);
+}
+
+.medsos .social a.ig {
+    background-color: rgb(252, 15, 105);
+}
+
+.medsos .social a.yt {
+    background-color: red;
+}
+
+.medsos h1 {
+    color: #2b83ea;
+    margin: 30px 0 20px;
+}
+
+.medsos p {
+    line-height: 1.5;
+}
+
+
+.form {
+    width: 50%;
+    padding: 10px;
+}
+
+.form-control {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: #9c9c9c 1px solid;
+    border-radius: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    float: right;
+    background-color: #2b83ea;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: white;
+}
+```
+
+#### Hasil
+![kontak](img/kontak.png)
